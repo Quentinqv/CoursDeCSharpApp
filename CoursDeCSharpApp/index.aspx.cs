@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -39,6 +40,10 @@ namespace CoursDeCSharpApp
             command.Dispose();
 
             cnn.Close();
+
+            String path = @"D:\Example.txt";
+            string[] lines;
+            lines = File.ReadAllLines(path);
         }
 
 		protected void btnSubmit_Click(object sender, EventArgs e)

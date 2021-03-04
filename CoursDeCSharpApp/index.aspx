@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CoursDeCSharpApp.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="CoursDeCSharpApp.WebForm1" Trace="true"%>
 
 <!DOCTYPE html>
 
@@ -32,6 +32,7 @@
         <br />
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource1">
             <Columns>
+                <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="nom_emp" HeaderText="nom_emp" SortExpression="nom_emp" />
                 <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                 <asp:BoundField DataField="email_emp" HeaderText="email_emp" SortExpression="email_emp" />
